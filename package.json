@@ -2,12 +2,19 @@
   "name": "chin-online",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "CHIN — Real-time multiplayer card game (Monorepo)",
   "scripts": {
+    "start": "node server/server.js",
     "dev:server": "cd server && node --watch server.js",
     "dev:client": "cd client && npm run dev",
-    "start:server": "cd server && node server.js",
     "build:client": "cd client && npm run build",
     "install:all": "cd server && npm install && cd ../client && npm install"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "socket.io": "^4.7.5",
+    "cors": "^2.8.5",
+    "uuid": "^10.0.0"
   }
 }
